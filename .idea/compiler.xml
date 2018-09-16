@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="wr-security-app" />
+        <module name="wr-security-browser" />
+        <module name="wr-security-core" />
+        <module name="wr-security-demo" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="wr-security" target="1.8" />
+      <module name="wr-security-app" target="1.8" />
+      <module name="wr-security-browser" target="1.8" />
+      <module name="wr-security-core" target="1.8" />
+      <module name="wr-security-demo" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
