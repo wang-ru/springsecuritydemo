@@ -12,13 +12,5 @@ import org.springframework.web.context.WebApplicationContext;
 @SpringBootTest
 @RunWith(SpringRunner.class)
 public class AppTest {
-    @Autowired
-    WebApplicationContext wac;
-    @Autowired
-    MockMvc mockMvc;
-    @Before
-    public void setUp() {
-        mockMvc = MockMvcBuilders.webAppContextSetup(wac).build();
-    }
 
 }
