@@ -14,7 +14,6 @@
 
     <name>wr-security-core</name>
     <!-- FIXME change it to the project's website -->
-    <url>http://www.example.com</url>
     <packaging>jar</packaging>
 
 
@@ -74,6 +73,7 @@
             <groupId>commons-beanutils</groupId>
             <artifactId>commons-beanutils</artifactId>
         </dependency>
+
     </dependencies>
 
 

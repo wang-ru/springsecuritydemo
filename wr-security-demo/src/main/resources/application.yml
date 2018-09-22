@@ -1,16 +1,20 @@
 spring:
   datasource:
     driver-class-name : com.mysql.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3306/imooc-demo?useUnicode=yes&characterEncoding=UTF-8&useSSL=false
+    url: jdbc:mysql://127.0.0.1:3306/mytest?useUnicode=yes&characterEncoding=UTF-8&useSSL=false
     username : root
     password : root
 #session 存储管理取消
   session:
     store-type: none
+
 server:
   port: 8080
 #  关闭权限认证
 security:
   basic:
     enabled: false
-
+management:
+  health:
+    redis:
+      enabled: false

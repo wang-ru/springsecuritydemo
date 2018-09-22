@@ -27,6 +27,12 @@
                 <version>Dalston.SR2</version>
                 <type>pom</type>
                 <scope>import</scope>
+                <exclusions>
+                    <exclusion>
+                        <artifactId>1.3.2.RELEASE</artifactId>
+                        <groupId>spring-cloud-netflix</groupId>
+                    </exclusion>
+                </exclusions>
             </dependency>
         </dependencies>
     </dependencyManagement>

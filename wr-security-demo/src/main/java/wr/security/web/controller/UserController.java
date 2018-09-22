@@ -8,6 +8,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import wr.security.dto.User;
 import wr.security.dto.UserQueryCondition;
+import wr.security.exception.UserNotExistException;
 
 import javax.validation.Valid;
 import java.util.ArrayList;
@@ -27,6 +28,7 @@ public class UserController {
     @GetMapping("/user/{id:\\d+}")
     @JsonView(User.DetailUser.class)
     public User getInfo(@PathVariable Integer id) {
+//        throw new UserNotExistException(id);
         System.out.println("id:"+id);
         User u = new User();
         u.setUserName("tom");
@@ -34,11 +36,7 @@ public class UserController {
     }
 
     @PostMapping("/user")
-    public User createUser(@Valid @RequestBody User user, BindingResult bindingResult) {
-        System.out.println(ReflectionToStringBuilder.toString(user));
-        if (bindingResult.hasErrors()) {
-            bindingResult.getAllErrors().stream().forEach(e-> System.out.println(e.getDefaultMessage()));
-        }
+    public User createUser(@Valid @RequestBody User user) {
         user.setId(1);
         return user;
     }
