@@ -10,6 +10,7 @@ import wr.security.dto.User;
 import wr.security.dto.UserQueryCondition;
 
 import javax.validation.Valid;
+import javax.websocket.server.PathParam;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,8 +25,7 @@ public class UserController {
         users.add(new User());
         return users;
     }
-    @GetMapping("/user/{id:\\d+}")
-    @JsonView(User.DetailUser.class)
+    @GetMapping("/user/{id}")
     public User getInfo(@PathVariable Integer id) {
         System.out.println("id:"+id);
         User u = new User();
