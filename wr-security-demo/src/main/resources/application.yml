@@ -18,3 +18,8 @@ management:
     redis:
       enabled: false
 
+#wr:
+#  security:
+#    browser:
+#      loginPage: /demo-signIn.html
+
