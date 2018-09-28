@@ -1,7 +1,7 @@
 spring:
   datasource:
     driver-class-name : com.mysql.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3306/mytest?useUnicode=yes&characterEncoding=UTF-8&useSSL=false
+    url: jdbc:mysql://127.0.0.1:3306/imooc-demo?useUnicode=yes&characterEncoding=UTF-8&useSSL=false
     username : root
     password : root
 #session 存储管理取消
@@ -9,12 +9,18 @@ spring:
     store-type: none
 
 server:
-  port: 8080
+  port: 9999
 #  关闭权限认证
 security:
   basic:
-    enabled: false
+    enabled: true
 management:
   health:
     redis:
       enabled: false
+
+#wr:
+#  security:
+#    browser:
+#      loginPage: /demo-signIn.html
+

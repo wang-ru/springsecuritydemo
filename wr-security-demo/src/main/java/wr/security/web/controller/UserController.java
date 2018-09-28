@@ -11,6 +11,7 @@ import wr.security.dto.UserQueryCondition;
 import wr.security.exception.UserNotExistException;
 
 import javax.validation.Valid;
+import javax.websocket.server.PathParam;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,8 +26,7 @@ public class UserController {
         users.add(new User());
         return users;
     }
-    @GetMapping("/user/{id:\\d+}")
-    @JsonView(User.DetailUser.class)
+    @GetMapping("/user/{id}")
     public User getInfo(@PathVariable Integer id) {
 //        throw new UserNotExistException(id);
         System.out.println("id:"+id);
