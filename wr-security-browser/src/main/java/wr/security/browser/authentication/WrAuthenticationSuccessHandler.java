@@ -19,7 +19,7 @@ import java.io.IOException;
  * Created by wsh10801 on 2018/9/24.
  */
 @Component("")
-public class WrAuthenticationSuccessHandler extends SavedRequestAwareAuthenticationSuccessHandler {
+public class  WrAuthenticationSuccessHandler extends SavedRequestAwareAuthenticationSuccessHandler {
     private Logger logger = LoggerFactory.getLogger(getClass());
     @Autowired
     private ObjectMapper objectMapper;
